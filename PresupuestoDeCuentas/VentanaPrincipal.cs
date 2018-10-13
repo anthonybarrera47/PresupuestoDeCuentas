@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PresupuestoDeCuentas.UI.Registro;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,5 +16,13 @@ namespace PresupuestoDeCuentas
         {
             InitializeComponent();
         }
+
+        private void presupuestoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PresupuestoCuentas presupuesto = new PresupuestoCuentas();
+            presupuesto.MdiParent = this;
+            presupuesto.Show();
+        }
+     
     }
 }

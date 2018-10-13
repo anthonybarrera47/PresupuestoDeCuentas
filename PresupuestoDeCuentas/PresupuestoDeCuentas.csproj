@@ -55,6 +55,13 @@
     <Compile Include="BLL\RepositorioBase.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\Cuentas.cs" />
+    <Compile Include="Entidades\Presupuesto.cs" />
+    <Compile Include="UI\Registro\CuentasRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registro\CuentasRegistro.Designer.cs">
+      <DependentUpon>CuentasRegistro.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registro\PresupuestoCuentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,9 +84,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Registro\CuentasRegistro.resx">
+      <DependentUpon>CuentasRegistro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registro\PresupuestoCuentas.resx">
       <DependentUpon>PresupuestoCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPrincipal.resx">
+      <DependentUpon>VentanaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
@@ -94,8 +108,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
     <Folder Include="UI\Consultas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_search_126577.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_cross-24_103181.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_floppy_disk_save_103863.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_new10_216291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_plus_square_black_243655.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

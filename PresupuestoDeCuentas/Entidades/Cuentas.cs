@@ -12,7 +12,8 @@ namespace PresupuestoDeCuentas.Entidades
         [Key]
         public int CuentaId { get; set; }
         public string Descripcion { get; set; }
-
+        public int TipoId;
+        public double Monto;
         public Cuentas()
         {
             CuentaId = 0;
