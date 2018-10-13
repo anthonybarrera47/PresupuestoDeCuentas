@@ -13,7 +13,7 @@ namespace PresupuestoDeCuentas.UI.Registro
 {
     public partial class CuentasRegistro : Form
     {
-        RepositorioBase<Cuentas> repositorio;
+        private RepositorioBase<Cuentas> repositorio;
         public CuentasRegistro()
         {
             InitializeComponent();
@@ -60,12 +60,12 @@ namespace PresupuestoDeCuentas.UI.Registro
             bool paso = true;
             if(string.IsNullOrEmpty(DescripciontextBox1.Text))
             {
-                errorProvider.SetError(DescripciontextBox1, "El Campo Descripcion esta Vacio");
+                errorProviderCuenta.SetError(DescripciontextBox1, "El Campo Descripcion esta Vacio");
                 paso = false;
             }
             if(MontoNumericUpDown.Value==0)
             {
-                errorProvider.SetError(MontoNumericUpDown, "El Campo Monto esta en 0");
+                errorProviderCuenta.SetError(MontoNumericUpDown, "El Campo Monto esta en 0");
                 paso = false;
             }
             return paso;
@@ -124,7 +124,7 @@ namespace PresupuestoDeCuentas.UI.Registro
             int.TryParse(CuentaIDnumericUpDown.Text, out id);
             if(!ExisteEnLaBaseDeDatos())
             {
-                errorProvider.SetError(CuentaIDnumericUpDown, "Esta Cuenta No Existe");
+                errorProviderCuenta.SetError(CuentaIDnumericUpDown, "Esta Cuenta No Existe");
                 CuentaIDnumericUpDown.Focus();
                 return;
             }

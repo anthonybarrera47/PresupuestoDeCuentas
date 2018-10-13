@@ -43,11 +43,11 @@
             this.BuscarButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderCuenta = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.CuentaIDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MontoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderCuenta)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -181,9 +181,9 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // errorProvider1
+            // errorProviderCuenta
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.errorProviderCuenta.ContainerControl = this;
             // 
             // CuentasRegistro
             // 
@@ -208,7 +208,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CuentaIDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MontoNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderCuenta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,6 +230,6 @@
         private System.Windows.Forms.ComboBox TipoComboBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ErrorProvider errorProvider;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProviderCuenta;
     }
 }
