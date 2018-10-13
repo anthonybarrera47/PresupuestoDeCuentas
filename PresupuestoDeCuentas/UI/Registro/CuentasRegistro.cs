@@ -13,12 +13,21 @@ namespace PresupuestoDeCuentas.UI.Registro
 {
     public partial class CuentasRegistro : Form
     {
+        public static int pas = 0;
         private RepositorioBase<Cuentas> repositorio;
         public CuentasRegistro()
         {
             InitializeComponent();
+            if(pas == 1)
+                LlenarComboBox();
         }
-
+        private void LlenarComboBox()
+        {
+            RepositorioBase<TipoCuentas> rTipoCuentas = new RepositorioBase<TipoCuentas>();
+            TipoComboBox.DataSource = rTipoCuentas.GetList(x => true);
+            TipoComboBox.ValueMember = "TipoId";
+            TipoComboBox.DisplayMember = "Descripcion";
+        }
         private void Limpiar()
         {
             CuentaIDnumericUpDown.Value = 0;
@@ -132,6 +141,12 @@ namespace PresupuestoDeCuentas.UI.Registro
                 MessageBox.Show("Cuenta Eliminada!!", "Exitoso!!!", MessageBoxButtons.OK);
             else
                 MessageBox.Show("No se pudo eliminar la Cuenta!!", "Fallo!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void AgregarTiposDeCuentasButton_Click(object sender, EventArgs e)
+        {
+            TipoCuenta tipoCuenta = new TipoCuenta();
+            tipoCuenta.ShowDialog();
         }
     }
 }

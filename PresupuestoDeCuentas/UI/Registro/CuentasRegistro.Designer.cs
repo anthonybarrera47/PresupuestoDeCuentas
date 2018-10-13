@@ -37,13 +37,13 @@
             this.MontoNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.DescripciontextBox1 = new System.Windows.Forms.TextBox();
             this.TipoComboBox = new System.Windows.Forms.ComboBox();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderCuenta = new System.Windows.Forms.ErrorProvider(this.components);
+            this.AgregarTiposDeCuentasButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.BuscarButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProviderCuenta = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.CuentaIDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MontoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
@@ -117,6 +117,25 @@
             this.TipoComboBox.Size = new System.Drawing.Size(121, 24);
             this.TipoComboBox.TabIndex = 31;
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
+            // errorProviderCuenta
+            // 
+            this.errorProviderCuenta.ContainerControl = this;
+            // 
+            // AgregarTiposDeCuentasButton
+            // 
+            this.AgregarTiposDeCuentasButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.AgregarTiposDeCuentasButton.Image = global::PresupuestoDeCuentas.Properties.Resources.if_plus_square_black_243655;
+            this.AgregarTiposDeCuentasButton.Location = new System.Drawing.Point(229, 95);
+            this.AgregarTiposDeCuentasButton.Name = "AgregarTiposDeCuentasButton";
+            this.AgregarTiposDeCuentasButton.Size = new System.Drawing.Size(29, 27);
+            this.AgregarTiposDeCuentasButton.TabIndex = 32;
+            this.AgregarTiposDeCuentasButton.UseVisualStyleBackColor = true;
+            this.AgregarTiposDeCuentasButton.Click += new System.EventHandler(this.AgregarTiposDeCuentasButton_Click);
+            // 
             // EliminarButton
             // 
             this.EliminarButton.Image = global::PresupuestoDeCuentas.Properties.Resources.if_cross_24_103181;
@@ -167,30 +186,12 @@
             this.BuscarButton.UseVisualStyleBackColor = true;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
-            // button1
-            // 
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button1.Image = global::PresupuestoDeCuentas.Properties.Resources.if_plus_square_black_243655;
-            this.button1.Location = new System.Drawing.Point(229, 95);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(29, 27);
-            this.button1.TabIndex = 32;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // errorProvider
-            // 
-            this.errorProvider.ContainerControl = this;
-            // 
-            // errorProviderCuenta
-            // 
-            this.errorProviderCuenta.ContainerControl = this;
-            // 
             // CuentasRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(353, 245);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.AgregarTiposDeCuentasButton);
             this.Controls.Add(this.TipoComboBox);
             this.Controls.Add(this.DescripciontextBox1);
             this.Controls.Add(this.MontoNumericUpDown);
@@ -228,7 +229,7 @@
         private System.Windows.Forms.NumericUpDown MontoNumericUpDown;
         private System.Windows.Forms.TextBox DescripciontextBox1;
         private System.Windows.Forms.ComboBox TipoComboBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AgregarTiposDeCuentasButton;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.ErrorProvider errorProviderCuenta;
     }

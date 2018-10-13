@@ -1,4 +1,5 @@
-﻿using PresupuestoDeCuentas.Entidades;
+﻿using PresupuestoDeCuentas.BLL;
+using PresupuestoDeCuentas.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,14 @@ namespace PresupuestoDeCuentas.UI.Registro
         public PresupuestoCuentas()
         {
             InitializeComponent();
+            LlenaComboBox();
+        }
+        private void LlenaComboBox()
+        {
+            RepositorioBase<Cuentas> rCuentas = new RepositorioBase<Cuentas>();
+            CuentascomboBox.DataSource = rCuentas.GetList(x => true);
+            CuentascomboBox.ValueMember = "CuentaId";
+            CuentascomboBox.DisplayMember = "Descripcion";
         }
         private void Limpiar()
         {
@@ -23,8 +32,6 @@ namespace PresupuestoDeCuentas.UI.Registro
             DescripciontextBox.Text = string.Empty;
             CuentascomboBox.SelectedIndex = 0;
             ValorTextBox.Text = string.Empty;
-
-
         }
         private void NuevoButton_Click(object sender, EventArgs e)
         {

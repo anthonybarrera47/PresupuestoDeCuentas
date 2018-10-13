@@ -81,6 +81,7 @@ namespace PresupuestoDeCuentas.UI.Registro
             if (paso)
             {
                 MessageBox.Show("Guardado!!", "Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CuentasRegistro.pas = 1;
                 Limpiar();
             }
             else
@@ -116,7 +117,10 @@ namespace PresupuestoDeCuentas.UI.Registro
                 return;
             }
             if (repositorio.Eliminar(id))
+            {
                 MessageBox.Show("Tipo De Cuenta Eliminada!!", "Exitoso!!!", MessageBoxButtons.OK);
+                Limpiar();
+            }  
             else
                 MessageBox.Show("No se pudo eliminar El Tipo De Cuenta!!", "Fallo!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
