@@ -45,5 +45,11 @@ namespace PresupuestoDeCuentas.UI.Registro
         {
             
         }
+
+        private void AgregarCuentaButton_Click(object sender, EventArgs e)
+        {
+            CuentasRegistro cuentaRegistro = new CuentasRegistro();
+            cuentaRegistro.ShowDialog();
+        }
     }
 }

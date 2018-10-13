@@ -43,7 +43,7 @@
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.BuscarButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AgregarCuentaButton = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.ValorTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PresupuestoIDnumericUpDown)).BeginInit();
@@ -183,15 +183,16 @@
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BuscarButton.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // AgregarCuentaButton
             // 
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button1.Image = global::PresupuestoDeCuentas.Properties.Resources.if_plus_square_black_243655;
-            this.button1.Location = new System.Drawing.Point(240, 113);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 23);
-            this.button1.TabIndex = 9;
-            this.button1.UseVisualStyleBackColor = true;
+            this.AgregarCuentaButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.AgregarCuentaButton.Image = global::PresupuestoDeCuentas.Properties.Resources.if_plus_square_black_243655;
+            this.AgregarCuentaButton.Location = new System.Drawing.Point(240, 113);
+            this.AgregarCuentaButton.Name = "AgregarCuentaButton";
+            this.AgregarCuentaButton.Size = new System.Drawing.Size(25, 23);
+            this.AgregarCuentaButton.TabIndex = 9;
+            this.AgregarCuentaButton.UseVisualStyleBackColor = true;
+            this.AgregarCuentaButton.Click += new System.EventHandler(this.AgregarCuentaButton_Click);
             // 
             // errorProvider
             // 
@@ -217,7 +218,7 @@
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.NuevoButton);
             this.Controls.Add(this.BuscarButton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.AgregarCuentaButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.CuentascomboBox);
             this.Controls.Add(this.PresupuestoIDnumericUpDown);
@@ -245,7 +246,7 @@
         private System.Windows.Forms.NumericUpDown PresupuestoIDnumericUpDown;
         private System.Windows.Forms.ComboBox CuentascomboBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AgregarCuentaButton;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button NuevoButton;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,8 +42,12 @@
             this.NuevoButton = new System.Windows.Forms.Button();
             this.BuscarButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.CuentaIDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MontoNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -123,6 +128,7 @@
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // GuardarButton
             // 
@@ -135,6 +141,7 @@
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // NuevoButton
             // 
@@ -158,6 +165,7 @@
             this.BuscarButton.TabIndex = 20;
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // button1
             // 
@@ -168,6 +176,14 @@
             this.button1.Size = new System.Drawing.Size(29, 27);
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // CuentasRegistro
             // 
@@ -191,6 +207,8 @@
             this.Text = "CuentasRegistro";
             ((System.ComponentModel.ISupportInitialize)(this.CuentaIDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MontoNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,5 +229,7 @@
         private System.Windows.Forms.TextBox DescripciontextBox1;
         private System.Windows.Forms.ComboBox TipoComboBox;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
